@@ -40,13 +40,12 @@
 1. При создании компонентов редактора необходимо ориентироваться на практику MVVM и методологию [FSD](https://feature-sliced.github.io/documentation/ru/docs/get-started/overview), так как проект не особо сложный предлагается следующая файловая структура без деления на сегменты (ui, model и т.п.):
    <br>Пример расположение компонента ShapesEditorWidget: \Widgets\ShapesEditor\ShapesEditorWidget.axaml
    <br>Для его ViewModel расположение будет схожим: \Widgets\ShapesEditor\ShapesEditorWidgetModel.cs
-   ![предлагаемое расположение компонентов](docs/Images/ComponentsArchitecture.png)
+   ![предлагаемое расположение компонентов](Assets/ComponentsArchitecture.png)
 
 #### Публикация
 1. Решение должно быть собрано c флагом Native AOT в конфигурации Release под linux и windows, после чего размешено в github Releases вашего репозитория.
-   `dotnet publish -p:PublishAot=true -r win-x64 -c Release`
-
-   `dotnet publish -p:PublishAot=true -r linux-arm64 -c Release`
+   <br> `dotnet publish -p:PublishAot=true -r win-x64 -c Release`
+   <br> `dotnet publish -p:PublishAot=true -r linux-arm64 -c Release`
 
 
 ## Рекомендации
@@ -55,6 +54,5 @@
 
 ## Пример решения: 
 
-_От вас не требуется вся представленная функциональность._
-
-![Пример работы редактора](docs/Videos/Sample.mp4)
+![Sample video](/Assets/Sample.gif)
+_*От вас не требуется вся представленная функциональность._
