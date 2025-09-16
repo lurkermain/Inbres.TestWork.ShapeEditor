@@ -2,7 +2,7 @@
 ----------------------------
 #### Используемый стэк:
 1. Технологии и фреймворки: .net8 или выше, C#12 или выше, Avalonia UI, Reactive UI или CommunityToolkit.Mvvm;
-2. Архитектурные паттерны: MVVM, [FSD](https://feature-sliced.github.io/), Clean Architecture;
+2. Архитектурные паттерны: MVVM, [FSD](https://feature-sliced.github.io/documentation/ru/docs/get-started/overview), [Clean Architecture](https://www.youtube.com/watch?v=WlCDcr8JYFU);
 
 ## Основное задание.
 Требуется разработать редактор фигур на Avalonia UI, для реализации выбрать один примитив и одну кривую из предлагаемых фигур.
@@ -10,7 +10,7 @@
 Особенность примитивов в том, что они состоят из фиксированного числа точек, в свою очередь количество опорных точек в кривой линии может изменяться, необходимо предусмотреть возможность добавления новых точек в кривую линию на момент ее создания.
 Аналогично примитивам необходима возможность изменения их размеров хотя бы на момент создания фигуры.
 
-Для простоты реализации фигур можно использовать [Path](https://docs.avaloniaui.net/ru/docs/guides/graphics-and-animation/graphics-and-animations) либо отрисовывать через [DrawingContext.DrawGeometry](https://reference.avaloniaui.net/api/Avalonia.Media/DrawingContext/E76A87CD). PathGeometry уже имеет функционал для отрисовки кривых Безье, можно ореинтироваться на докумкентацию по [svg](https://developer.mozilla.org/ru/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths) path, их синтаксис довольно схож.
+Для простоты реализации фигур можно использовать [Path](https://docs.avaloniaui.net/ru/docs/guides/graphics-and-animation/graphics-and-animations) либо отрисовывать через [DrawingContext.DrawGeometry](https://reference.avaloniaui.net/api/Avalonia.Media/DrawingContext/E76A87CD). PathGeometry уже имеет функционал для отрисовки кривых Безье, можно ореинтироваться на документацию по [svg](https://developer.mozilla.org/ru/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths) path, их синтаксис довольно схож.
 
 #### Предлагаемые фигуры:
 1. Примитивы: Прямоугольник, Овал, Треугольник.
@@ -38,7 +38,8 @@
 1. При создании компонентов редактора необходимо ориентироваться на практику MVVM и методологию [FSD](https://feature-sliced.github.io/documentation/ru/docs/get-started/overview), так как проект не особо сложный предлагается следующая файловая структура без деления на сегменты (ui, model и т.п.):
    <br>Пример расположение компонента ShapesEditorWidget: \Widgets\ShapesEditor\ShapesEditorWidget.axaml
    <br>Для его ViewModel расположение будет схожим: \Widgets\ShapesEditor\ShapesEditorWidgetModel.cs
-   ![предлагаемое расположение компонентов](Assets/ComponentsArchitecture.png)
+
+![предлагаемое расположение компонентов](Assets/ComponentsArchitecture.png)
 
 #### Публикация
 1. Решение должно быть собрано c флагом Native AOT в конфигурации Release под linux и windows, после чего размешено в github Releases вашего репозитория.
