@@ -1,8 +1,9 @@
 Тестовое задание в ИНБРЭС "Простой редактор фигур".
 ----------------------------
 #### Используемый стэк:
-1. Технологии и фреймворки: .net8 или выше, C#12 или выше, Avalonia UI, Reactive UI или CommunityToolkit.Mvvm;
-2. Архитектурные паттерны: MVVM, [FSD](https://feature-sliced.github.io/documentation/ru/docs/get-started/overview), [Clean Architecture](https://www.youtube.com/watch?v=WlCDcr8JYFU);
+1. Технологии и фреймворки: .net9 или выше, C#13 или выше, Avalonia UI, Reactive UI или CommunityToolkit.Mvvm;
+2. Архитектурные паттерны: [MVVM](https://www.youtube.com/watch?v=T2zovvglVZw), [FSD](https://feature-sliced.github.io/documentation/ru/docs/get-started/overview), [Clean Architecture](https://www.youtube.com/watch?v=WlCDcr8JYFU);
+3. Рекомендуем Использовать [HotAvalonia](https://github.com/Kira-NT/HotAvalonia) для горячей перезагрузки axaml.
 
 ## Основное задание.
 Требуется разработать редактор фигур на Avalonia UI, для реализации выбрать один примитив и одну кривую из предлагаемых фигур.
@@ -12,6 +13,7 @@
 Необходимо продемонстрировать работу с паттернами MVVM, сериализовав ViewModel или Model фигур, с последующим востановлением состояния при новой загрузке проекта. В сериализуемые данные не должны попадать Control'ы Avalonia Ui, сериализация структур Point, Color, Thickness, а так же иных структур и классов не наследующихся от Сontrol вполне допустима. 
 
 Для простоты реализации фигур можно использовать [Path](https://docs.avaloniaui.net/ru/docs/guides/graphics-and-animation/graphics-and-animations) либо отрисовывать через [DrawingContext.DrawGeometry](https://reference.avaloniaui.net/api/Avalonia.Media/DrawingContext/E76A87CD). PathGeometry уже имеет функционал для отрисовки кривых Безье, можно ореинтироваться на документацию по [svg](https://developer.mozilla.org/ru/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths) path, их синтаксис довольно схож.
+
 
 
 #### Предлагаемые фигуры:
@@ -51,7 +53,10 @@
 
 
 ## Рекомендации
-Используйте [HotAvalonia](https://github.com/Kira-NT/HotAvalonia) для горячей перезагрузки axaml.
+
+## Рекомендуемые материалы:
+1. [Кодируем: Clean Architecture Ультимативно (чистая архитектура проекта любого размера, принципы, мышление)](https://www.youtube.com/watch?v=WlCDcr8JYFU)
+2. [Unitist Notes: Model View ViewModel, Модель Вид Модель Вида, Unity, C#](https://www.youtube.com/watch?v=T2zovvglVZw);
 
 ## Пример решения: 
 ![Sample video](/Assets/Sample.gif)
