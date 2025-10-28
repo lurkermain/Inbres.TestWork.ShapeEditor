@@ -1,0 +1,46 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="clr-namespace:ShapesEditor.App.Widgets.ShapesEditor"
+             xmlns:local="clr-namespace:ShapesEditor.App.Widgets.ShapesEditor"
+			 x:Class="ShapesEditor.App.Widgets"
+             x:DataType="vm:ShapesEditorWidgetModel">
+	<UserControl.DataContext>
+		<vm:ShapesEditorWidgetModel/>
+	</UserControl.DataContext>
+
+	<Grid>
+		<Canvas Name="DrawingCanvas" Background="White"
+				PointerPressed="OnCanvasPointerPressed"
+				PointerMoved="OnCanvasPointerMoved"
+				PointerReleased="OnCanvasPointerReleased">
+			<!-- Bind shapes collection -->
+			<ItemsControl Items="{Binding Shapes}">
+				<ItemsControl.ItemsPanel>
+					<ItemsPanelTemplate>
+						<Canvas/>
+					</ItemsPanelTemplate>
+				</ItemsControl.ItemsPanel>
+				<ItemsControl.ItemTemplate>
+					<DataTemplate>
+						<Path Data="{Binding PathGeometry}"
+							  Stroke="{Binding Stroke}"
+							  StrokeThickness="{Binding StrokeThickness}"
+							  Fill="{Binding Fill}" />
+					</DataTemplate>
+				</ItemsControl.ItemTemplate>
+			</ItemsControl>
+
+			<!-- If user is currently creating a shape, show preview path (bind to Temp model via converter / extra Path) -->
+			<Path x:Name="PreviewPath" Stroke="Gray" StrokeDashArray="4 2" />
+		</Canvas>
+
+		<!-- small toolbar -->
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top">
+			<Button Content="Add Rectangle" Command="{Binding AddRectangleCommand}" />
+			<Button Content="Start Quadratic" Command="{Binding StartQuadraticCommand}" />
+			<Button Content="Commit" Command="{Binding CommitTempShapeCommand}" />
+			<Button Content="Save JSON" Command="{Binding SerializeCommand}" />
+			<Button Content="Load JSON" Command="{Binding DeserializeCommand}" />
+		</StackPanel>
+	</Grid>
+</UserControl>

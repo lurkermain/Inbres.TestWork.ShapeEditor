@@ -1,0 +1,19 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="ShapesEditor.App.MainWindow"
+        Width="1000" Height="700"
+        Title="Simple Rectangle Drawer">
+	<Grid>
+		<!-- toolbar -->
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="6">
+			<Button Name="ClearButton" Content="Clear" Click="ClearButton_Click"/>
+			<TextBlock Text="  — нажмите и тяните левой кнопкой мыши для рисования прямоугольника" VerticalAlignment="Center" Margin="8,0,0,0"/>
+		</StackPanel>
+
+		<!-- canvas, отступ сверху чтобы тулбар не перекрывал -->
+		<Canvas Name="DrawingCanvas" Background="White" Margin="0,40,0,0"
+				PointerPressed="DrawingCanvas_PointerPressed"
+				PointerMoved="DrawingCanvas_PointerMoved"
+				PointerReleased="DrawingCanvas_PointerReleased" />
+	</Grid>
+</Window>

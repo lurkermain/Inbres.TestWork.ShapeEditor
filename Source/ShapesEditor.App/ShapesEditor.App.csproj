@@ -6,12 +6,15 @@
     <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+	  <!-- Важно для Avalonia -->
+	  <UseAvalonia>true</UseAvalonia>
+	  <!-- Включает предкомпиляцию XAML (markup compiler).
+         Если возникают проблемы, можно временно убрать/false,
+         но в большинстве случаев true — корректно. -->
+	  <AvaloniaUseMarkupCompiler>true</AvaloniaUseMarkupCompiler>
+	  <!-- AOT-совместимость флаги, если нужны -->
+	  <IsAotCompatible>true</IsAotCompatible>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Folder Include="Models\" />
-    <AvaloniaResource Include="Assets\**" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="11.3.6" />
@@ -23,6 +26,6 @@
       <IncludeAssets Condition="'$(Configuration)' != 'Debug'">None</IncludeAssets>
       <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="Avalonia.ReactiveUI" Version="11.3.6" />
+    <PackageReference Include="ReactiveUI" Version="22.2.1" />
   </ItemGroup>
 </Project>
