@@ -1,19 +1,24 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="ShapesEditor.App.MainWindow"
-        Width="1000" Height="700"
-        Title="Simple Rectangle Drawer">
-	<Grid>
-		<!-- toolbar -->
-		<StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="6">
-			<Button Name="ClearButton" Content="Clear" Click="ClearButton_Click"/>
-			<TextBlock Text="  — нажмите и тяните левой кнопкой мыши для рисования прямоугольника" VerticalAlignment="Center" Margin="8,0,0,0"/>
-		</StackPanel>
+        Width="900" Height="650" Title="Shapes Editor">
+	<DockPanel LastChildFill="True">
+		<Border DockPanel.Dock="Top" Background="#333" Padding="8" BorderBrush="#CCC" BorderThickness="0,0,0,1">
+			<StackPanel Orientation="Horizontal" Spacing="8" VerticalAlignment="Center">
+				<ComboBox x:Name="ToolSelector" Width="220" SelectedIndex="0">
+					<ComboBox.Items>
+						<x:String>Прямоугольник</x:String>
+						<x:String>Кубическая кривая Безье</x:String>
+					</ComboBox.Items>
+				</ComboBox>
 
-		<!-- canvas, отступ сверху чтобы тулбар не перекрывал -->
-		<Canvas Name="DrawingCanvas" Background="White" Margin="0,40,0,0"
-				PointerPressed="DrawingCanvas_PointerPressed"
-				PointerMoved="DrawingCanvas_PointerMoved"
-				PointerReleased="DrawingCanvas_PointerReleased" />
-	</Grid>
+				<Button x:Name="FinishCurveButton" Content="Finish Curve" Width="120"/>
+				<Button x:Name="SaveButton" Content="Save JSON" Width="100"/>
+				<Button x:Name="LoadButton" Content="Load JSON" Width="100"/>
+				<Button x:Name="ClearButton" Content="Clear" Width="80"/>
+			</StackPanel>
+		</Border>
+
+		<Canvas x:Name="DrawingCanvas" Background="White"/>
+	</DockPanel>
 </Window>

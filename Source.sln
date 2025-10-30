@@ -5,7 +5,7 @@ VisualStudioVersion = 17.14.36518.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapesEditor.App", "Source\ShapesEditor.App\ShapesEditor.App.csproj", "{57746674-6F2E-4595-B2DF-1F07027286A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapesEditor", "Source\ShapesEditor\ShapesEditor.csproj", "{514FAD70-9DEA-4F24-9F49-6A1D60F77DBD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EditorLibrary", "Source\EditorLibrary\EditorLibrary.csproj", "{48CF9443-46CC-4C26-96B9-FEEC9825AAFC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{57746674-6F2E-4595-B2DF-1F07027286A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57746674-6F2E-4595-B2DF-1F07027286A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57746674-6F2E-4595-B2DF-1F07027286A0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{514FAD70-9DEA-4F24-9F49-6A1D60F77DBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{514FAD70-9DEA-4F24-9F49-6A1D60F77DBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{514FAD70-9DEA-4F24-9F49-6A1D60F77DBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{514FAD70-9DEA-4F24-9F49-6A1D60F77DBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48CF9443-46CC-4C26-96B9-FEEC9825AAFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48CF9443-46CC-4C26-96B9-FEEC9825AAFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48CF9443-46CC-4C26-96B9-FEEC9825AAFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48CF9443-46CC-4C26-96B9-FEEC9825AAFC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
